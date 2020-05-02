@@ -7,13 +7,13 @@ namespace ChatUygulamasi.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class deneme : IMigrationMetadata
+    public sealed partial class teneme : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(deneme));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(teneme));
         
         string IMigrationMetadata.Id
         {
-            get { return "202005011614060_deneme"; }
+            get { return "202005011941348_teneme"; }
         }
         
         string IMigrationMetadata.Source
