@@ -482,3 +482,16 @@ C:\Users\EbuBekir\Source\Repos\ChatUygulamasi\ChatUygulamasi\ChatUygulamasi\obj\
 C:\Users\EbuBekir\Source\Repos\ChatUygulamasi\ChatUygulamasi\ChatUygulamasi\obj\Debug\ChatUygulamasi.pdb
 C:\Users\EbuBekir\Source\Repos\ChatUygulamasi\ChatUygulamasi\ChatUygulamasi\obj\Debug\ChatUygulamasi.Migrations.teneme.resources
 C:\Users\EbuBekir\Source\Repos\ChatUygulamasi\ChatUygulamasi\ChatUygulamasi\obj\Debug\ChatUygulamasi.csproj.GenerateResource.cache
+C:\Users\EbuBekir\Source\Repos\ChatUygulamasi\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\EbuBekir\Source\Repos\ChatUygulamasi\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\EbuBekir\Source\Repos\ChatUygulamasi\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.Owin.dll
+C:\Users\EbuBekir\Source\Repos\ChatUygulamasi\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\EbuBekir\Source\Repos\ChatUygulamasi\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.Owin.Security.dll
+C:\Users\EbuBekir\Source\Repos\ChatUygulamasi\ChatUygulamasi\ChatUygulamasi\bin\Owin.dll
+C:\Users\EbuBekir\Source\Repos\ChatUygulamasi\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\EbuBekir\Source\Repos\ChatUygulamasi\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\EbuBekir\Source\Repos\ChatUygulamasi\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\EbuBekir\Source\Repos\ChatUygulamasi\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\EbuBekir\Source\Repos\ChatUygulamasi\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.Owin.xml
+C:\Users\EbuBekir\Source\Repos\ChatUygulamasi\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\EbuBekir\Source\Repos\ChatUygulamasi\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.Owin.Security.xml
