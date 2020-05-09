@@ -12,14 +12,15 @@ namespace ChatUygulamasi.Models
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
        
-        [ForeignKey("kullanici")]
-        public int KullaniciId { get; set; }
+        public string GonderenAdi { get; set; }
+
+        public string AliciAdi { get; set; }
 
         public string MesajMetin { get; set; }
 
         public DateTime Tarih { get; set; }
 
-        public virtual Kullanici kullanici { get; set; }
+    
 
     }
 }

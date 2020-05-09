@@ -320,3 +320,16 @@ C:\Users\Cemre\Source\Repos\ChatUygulamasi2\ChatUygulamasi\ChatUygulamasi\obj\De
 C:\Users\Cemre\Source\Repos\ChatUygulamasi2\ChatUygulamasi\ChatUygulamasi\obj\Debug\ChatUygulamasi.csproj.CopyComplete
 C:\Users\Cemre\Source\Repos\ChatUygulamasi2\ChatUygulamasi\ChatUygulamasi\obj\Debug\ChatUygulamasi.dll
 C:\Users\Cemre\Source\Repos\ChatUygulamasi2\ChatUygulamasi\ChatUygulamasi\obj\Debug\ChatUygulamasi.pdb
+C:\Users\Cemre\Source\Repos\ChatUygulamasi2\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Cemre\Source\Repos\ChatUygulamasi2\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\Cemre\Source\Repos\ChatUygulamasi2\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.Owin.dll
+C:\Users\Cemre\Source\Repos\ChatUygulamasi2\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Cemre\Source\Repos\ChatUygulamasi2\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.Owin.Security.dll
+C:\Users\Cemre\Source\Repos\ChatUygulamasi2\ChatUygulamasi\ChatUygulamasi\bin\Owin.dll
+C:\Users\Cemre\Source\Repos\ChatUygulamasi2\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\Cemre\Source\Repos\ChatUygulamasi2\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\Cemre\Source\Repos\ChatUygulamasi2\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.Owin.xml
+C:\Users\Cemre\Source\Repos\ChatUygulamasi2\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Cemre\Source\Repos\ChatUygulamasi2\ChatUygulamasi\ChatUygulamasi\bin\Microsoft.Owin.Security.xml
+C:\Users\Cemre\Source\Repos\ChatUygulamasi2\ChatUygulamasi\ChatUygulamasi\obj\Debug\ChatUygulamasi.csproj.CoreCompileInputs.cache
+C:\Users\Cemre\Source\Repos\ChatUygulamasi2\ChatUygulamasi\ChatUygulamasi\obj\Debug\ChatUygulamasi.Migrations.cemre.resources
