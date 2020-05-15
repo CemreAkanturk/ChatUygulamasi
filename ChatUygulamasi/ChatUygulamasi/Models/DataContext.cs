@@ -10,7 +10,7 @@ namespace ChatUygulamasi.Models
     {
 
         public virtual DbSet<Mesaj> Mesajs { get; set; }
-      
 
+        public virtual DbSet<Kullanici> Kullanicis { get; set; }
     }
 }

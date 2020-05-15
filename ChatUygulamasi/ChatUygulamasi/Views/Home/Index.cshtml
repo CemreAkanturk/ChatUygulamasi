@@ -1,75 +1,76 @@
-﻿
+﻿@model List<ChatUygulamasi.Models.Kullanici>
+
 @{
     ViewBag.Title = "Index";
 }
-<style>
+   
 
-    .btn-1 {
-        padding: 14px 24px;
-        text-align: center;
-        cursor: pointer;
-        outline: none;
-        color: #fff;
-        background-color: #4CAF50;
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 4px #bbb;
-    }
-
-        .btn-1:hover {
-            background-color: #4CAF50;
-        }
-
-        .btn-1:active {
-            background-color: #4CAF50;
-            box-shadow: 0 3px #444;
-            transform: translateY(3px);
-        }
-
-
-
-    
-</style>
-
-<div id="kullanicikontrol" >
+<div id="kullanicikontrol">
     <label>Kullanici Adi Giriniz:</label>
-    <input id="txtUsername" value="" />
-    <button id="Giris">Giris Yap!</button>
+    <input id="txtNickName" value="" />
+    <button id="btnStartChat">Giris Yap!</button>
 </div>
 
+<input id="KullaniciId" type="hidden" />
+<input id="KullaniciName" type="hidden" />
 
 <div class="container-fluid h-100" id="ChatRoom">
     <div class="row justify-content-center h-100">
-        <div class="col-md-4 col-xl-3 chat">
-            <div class="card mb-sm-3 mb-md-0 contacts_card">
-                <div class="card-header">
-                    <div class="input-group">
-                        <input type="text" placeholder="Search..." name="" class="form-control search">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text search_btn"><i class="fas fa-search"></i></span>
-                        </div>
+        <div class="col-md-4 col-xl-4 chat">
+            <div class="card mb-sm-4 mb-md-0 contacts_card">
+
+                <div class="d-flex bd-highlight" style="background-color:#7ebdb4;margin-top:9px;height:75px;">
+                    <div class="user_info" style="margin-left:110px">
+                        <span>Kullanıcılar</span>
+
                     </div>
                 </div>
-                <div class="card-body contacts_body">
-                    <ui class="contacts">
-                        <li class="active">
-                            <div class="d-flex bd-highlight">
-                                <div class="img_cont">
-                                    <img src="https://www.khaama.com/wp-content/uploads/2019/02/Afghan-Singer-Ghawgha-Taban-880x672-880x672.jpg" class="rounded-circle user_img">
-                                    <span class="online_icon"></span>
-                                </div>
-                                <div class="user_info">
-                                    <span>Maryam Naz</span>
-                                    <p>Maryam is online</p>
-                                </div>
-                            </div>
-                        </li>
+                <div class="card-body contacts_body" style="width:300px;height:450px;">
+
+                    <ui class="contacts kullanicilar">
+
                     </ui>
                 </div>
+                <div class="d-flex bd-highlight" style="background-color:#7ebdb4;margin-top:9px;height:75px;">
+                    <div class="user_info" style="margin-left:127px">
+                        <span>Gruplar</span>
+
+                    </div>
+                </div>
+                <div class="card-body contacts_body" style="width:300px;height:250px;">
+
+                    <ui class="contacts gruplar">
+
+
+                        <div class="d-flex bd-highlight grup_1">
+
+                            <div class="user_info active" style="width:325px;margin-top:5px;">
+                                <span><a type="btn" class="grup">1. Sınıflar</a></span>
+                                <a href="#" id="grup_1" class="Gruplar" style="margin-left:112px;margin-top:2px;">+ Gruba Katıl</a>
+                            </div>
+
+
+                        </div>
+
+                        <div class="d-flex bd-highlight grup_2">
+
+                            <div class="user_info active" style="width:325px;margin-top:5px;">
+                                <span><a type="btn" class="grup">2. Sınıflar</a></span>
+                                <a href="#" id="grup_2" class="Gruplar"  style="margin-left:112px;margin-top:2px;">+ Gruba Katıl</a>
+                            </div>
+
+
+                        </div>
+
+
+                    </ui>
+
+                </div>
+
                 <div class="card-footer"></div>
             </div>
         </div>
-        <div class="col-md-8 col-xl-6 chat">
+        <div class="col-md-8 col-xl-6 Genelchat">
             <div class="card">
                 <div class="card-header msg_head">
                     <div class="d-flex bd-highlight">
@@ -78,24 +79,88 @@
                             <span class="online_icon"></span>
                         </div>
                         <div class="user_info">
-                            <span>Chat Odası</span>
-                            <p>1767 Messages</p>
+                            <span>Genel Chat Odası</span>
+
                         </div>
-                       
+
                     </div>
-                    <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
-               
+
+
                 </div>
                 <div id="messages" class="card-body msg_card_body ">
-                   
+
                 </div>
                 <div class="card-footer">
                     <div class="input-group">
                         <div class="input-group-append">
                             <span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
                         </div>
-                        <textarea style="max-width:380px;" id="txtMessage" class="form-control type_msg" placeholder="Type your message..." ></textarea>
+                        <textarea style="max-width:380px;" id="txtMessage" class="form-control type_msg" placeholder="Type your message..."></textarea>
                         <button id="btnSendMessage" class="btn-1" style="margin-left:10px;">Gönder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8 col-xl-6 Privatechat">
+            <div class="card">
+                <div class="card-header msg_head">
+                    <div class="d-flex bd-highlight">
+                        <div class="img_cont">
+                            <img src="~/Content/img/AllChatİmage.jpg" class="rounded-circle user_img">
+                            <span class="online_icon"></span>
+                        </div>
+                        <div class="user_info" id="OdaAdi">
+
+                            <p>1767 Messages</p>
+                        </div>
+                        <div hidden><input id="gidecekkullanici" value="" /></div>
+                    </div>
+                    <span id="action_menu_btn" onclick="PrivateKapat()"><i class="close icon"></i></span>
+
+                </div>
+                <div id="Privatemessages" class="card-body msg_card_body ">
+
+                </div>
+                <div class="card-footer">
+                    <div class="input-group">
+                        <div class="input-group-append">
+                            <span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
+                        </div>
+                        <textarea style="max-width:380px;" id="PrivatetxtMessage" class="form-control type_msg" placeholder="Type your message..."></textarea>
+                        <button id="PrivatebtnSendMessage" class="btn-1" style="margin-left:10px;">Gönder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8 col-xl-6 GrupChat">
+            <div class="card">
+                <div class="card-header msg_head">
+                    <div class="d-flex bd-highlight">
+                        <div class="img_cont">
+                            <img src="~/Content/img/AllChatİmage.jpg" class="rounded-circle user_img">
+                            <span class="online_icon"></span>
+                        </div>
+                        <div class="user_info" id="GrupOdaAdi">
+
+                           
+                        </div>
+                        <div hidden><input id="grupAdi" value="" /></div>
+                    </div>
+                    <span id="action_menu_btn" onclick="PrivateKapat()"><i class="close icon"></i></span>
+
+                </div>
+                <div id="Grupmessages" class="card-body msg_card_body ">
+
+                </div>
+                <div class="card-footer">
+                    <div class="input-group">
+                        <div class="input-group-append">
+                            <span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
+                        </div>
+                        <textarea style="max-width:380px;" id="GruptxtMessage" class="form-control type_msg" placeholder="Type your message..."></textarea>
+                        <button id="GrupbtnSendMessage" class="btn-1" style="margin-left:10px;">Gönder</button>
                     </div>
                 </div>
             </div>
@@ -105,64 +170,375 @@
 
 
 
+
+
+
 @section Scripts{
 
-    <script>
+    <script type="text/javascript">
+
         $(function () {
 
-            var chat = $.connection.chatHub;
-            var $username = $('#txtUsername');
-            var $message = $('#txtMessage');
-            var $messages = $('#messages');
+            setScreen(false);
 
-            $message.focus();
+            // Declare a proxy to reference the hub.
+            var chatHub = $.connection.chatHub;
 
-            chat.client.sendMessage = function (name, message) {
+            chatHub.client.onConnected = function (id, userName, durum, kullanicilar, mesajlar) {
+
+
+
+                setScreen(true);
+
+                $('#KullaniciId').val(id);
+                $('#KullaniciName').val(userName);
+                $('#spanUser').html(userName);
+
+                // Add All Users
+                for (i = 0; i < kullanicilar.length; i++) {
+
+                    AddUser(chatHub, kullanicilar[i].connectionId, kullanicilar[i].KullaniciAdi, kullanicilar[i].Durum);
+                }
+
+                // Add Existing Messages
+                for (i = 0; i < messages.length; i++) {
+
+                    AddMessage(messages[i].UserName, messages[i].Message);
+                }
+
+
+            }
+
+            // On New User Connected
+            chatHub.client.onNewUserConnected = function (id, userName, durum) {
+
+                AddUser(chatHub, id, userName, durum);
+            }
+
+
+            // On User Disconnected
+            chatHub.client.onUserDisconnected = function (userName, Durum) {
+
+                $('#' + userName + "icon").removeClass;
+                $('#' + userName + "icon").addClass(Durum);
+
+            }
+
+            chatHub.client.messageReceived = function (userName, message) {
+
+                AddMessage(userName, message);
+            }
+
+
+            chatHub.client.sendPrivateMessage = function ( toUserId,fromUserName, message) {
+
+                var kullaniciadi = $('#txtNickName').val();
 
                 var tarih = new Date();
                 var saat = tarih.getHours();
                 var dakika = tarih.getMinutes();
-                var kullanici = $username.val();
-                if (kullanici == name) {
-                    $("#messages").append(`<div class="d-flex justify-content-end mb-4"><div class= "msg_cotainer_send"> <label style="color: #B4886B">Ben:</label> </br>${message}<span class= "msg_time_send" style="margin-top:3px;">${saat}:${dakika} Today</span ></div > </div >`);
-                }
-                else {
-                    $("#messages").append(`<div class="d-flex justify-content-start mb-4">
-                        <div class="msg_cotainer">
-                           <label style="color: #B4886B">${name}:</label> </br> ${message}
-                          <span class= "msg_time_send" style="margin-top:3px;">${saat}:${dakika} Today</span >
-                        </div>
-                    </div>`);
-                }
-            };
 
+                if (kullaniciadi == fromUserName) {
+
+
+
+                    $('#Privatemessages').append(`<div class="d-flex justify-content-end mb-4"><div class= "msg_cotainer_send"> <label style="color: #B4886B">${fromUserName}</label> </br>${message}<span class= "msg_time_send" style="margin-top:3px;">${saat}:${dakika} Today</span ></div > </div >`);
+                } else {
+                    alert(fromUserName + " kullanicisindan yeni mesajınız var!");
+                    $("#Privatemessages").append(`<div class="d-flex justify-content-start mb-4">
+                            <div class="msg_cotainer">
+                               <label style="color: #B4886B">${fromUserName}:</label> </br> ${message}
+                              <span class= "msg_time_send" style="margin-top:3px;">${saat}:${dakika} Today</span >
+                            </div>
+                        </div>`);
+
+                }
+
+            }
+
+
+
+            chatHub.client.sendMessageToGruop = function (userName, message) {
+
+                var kullaniciadi = $('#txtNickName').val();
+
+                var tarih = new Date();
+                var saat = tarih.getHours();
+                var dakika = tarih.getMinutes();
+
+                if (kullaniciadi == userName) {
+
+
+
+                    $('#Grupmessages').append(`<div class="d-flex justify-content-end mb-4"><div class= "msg_cotainer_send"> <label style="color: #B4886B">Ben:</label> </br>${message}<span class= "msg_time_send" style="margin-top:3px;">${saat}:${dakika} Today</span ></div > </div >`);
+                } else {
+                    alert("Grup Mesajınız var!")
+                    $("#Grupmessages").append(`<div class="d-flex justify-content-start mb-4">
+                            <div class="msg_cotainer">
+                               <label style="color: #B4886B">${userName}:</label> </br> ${message}
+                              <span class= "msg_time_send" style="margin-top:3px;">${saat}:${dakika} Today</span >
+                            </div>
+                        </div>`);
+
+                }
+
+            }
+
+
+
+            // Start Hub
             $.connection.hub.start().done(function () {
+
+                $("#btnStartChat").click(function () {
+
+                    var name = $("#txtNickName").val().trim();
+                    if (name.length > 0) {
+                        chatHub.server.connect(name);
+                    }
+                    else {
+                        alert("Lütfen Kullanıcı Adı Giriniz!");
+                    }
+
+                });
+
+
                 $('#btnSendMessage').click(function () {
 
-                    chat.server.send($username.val(), $message.val());
+                    var msg = $("#txtMessage").val();
+                    if (msg.length > 0) {
 
-                    $message.val('').focus();
+                        var userName = $('#KullaniciName').val();
+                        chatHub.server.sendMessageToAll(userName, msg);
+                        $("#txtMessage").val('');
+                    }
                 });
+
+                $('.Gruplar').click(function () {
+                    $("#Grupmessages").empty();
+                    var grupName = $(this).attr("id");
+                    chatHub.server.join(grupName);
+                    $("#grupAdi").val(grupName);
+
+
+                    $(".Genelchat").hide();
+                    $(".Privatechat").hide();
+                    $("#GrupOdaAdi").empty();
+                    $("#GrupOdaAdi").append(`<span >${grupName} </span>`);
+                    $(".GrupChat").show();
+
+                });
+
+                $('#GrupbtnSendMessage').click(function () {
+
+                    var msg = $("#GruptxtMessage").val();
+                    if (msg.length > 0) {
+
+                        var userName = $('#KullaniciName').val();
+                        var grupName = $('#grupAdi').val();
+                      
+                        chatHub.server.sendMessageToGruop(userName, msg, grupName);
+                        $("#GruptxtMessage").val('');
+                    }
+                });
+
+
+
+                $("#txtNickName").keypress(function (e) {
+                    if (e.which == 13) {
+                        $("#btnStartChat").click();
+                    }
+                });
+
+                $("#txtMessage").keypress(function (e) {
+                    if (e.which == 13) {
+                        $('#btnSendMessage').click();
+                    }
+                });
+
             });
+
         });
 
-        $(document).ready(function () {
+        function setScreen(isLogin) {
 
-            $('#action_menu_btn').click(function () {
-                $('.action_menu').toggle();
-            });
+            if (!isLogin) {
 
-            $("#ChatRoom").hide();
-            $('#Giris').click(function () {
-                if ($("#txtUsername").val() == "") { alert("Lütfen Kullanıcı Adı Giriniz!!"); }
-                else {
-                    $("#ChatRoom").show();
-                    $("#kullanicikontrol").hide();
+                $("#ChatRoom").hide();
+                $("#kullanicikontrol").show();
+            }
+            else {
+
+                $("#ChatRoom").show();
+                $(".GrupChat").hide();
+                $(".Privatechat").hide();
+              
+                $("#kullanicikontrol").hide();
+            }
+
+        }
+
+        function PrivateKapat() {
+
+
+              $(".Privatechat").hide();
+              $(".GrupChat").hide();
+              $(".Genelchat").show();
+
+        }
+
+
+
+        function AddUser(chatHub, id, name, Durum) {
+
+            var kullaniciadi = $('#txtNickName').val();
+
+
+
+            if (kullaniciadi == name) {
+
+
+                $(".kullanicilar").prepend(`<div class="d-flex bd-highlight">
+
+                                    <div class="user_info" >
+                                        <span>ben (${name})</span>
+
+                                    </div>
+                                </div>
+`);
+
+            }
+            else {
+
+                var element = document.getElementsByClassName(name);
+                if (element[0]) { element[0].remove(); }
+
+                $(".kullanicilar").append(`<div class="d-flex bd-highlight ${name}"  >
+
+                                    <div class="user_info active" style="width:325px;margin-top:5px;">
+                                       <a href="#" id="${name}icon" class="${Durum}" style="margin-left:7px;margin-top:7px;"></a>
+                                       <span><a type="btn" class="users" id="${name}" data-id="${id}">${name}</a></span>
+                                      
+                                    </div>
+                                </div>
+`);
+
+
+            }
+
+
+            $(".users").dblclick(function () {
+                var Adi = $(this).attr('id');
+                var idsi = $(this).attr('data-id');
+                var Mesaj = {
+                    alici: kullaniciadi,
+                    gonderen: Adi,
+                   
+                }
+
+                  if (kullaniciadi != Adi) {
+
+                    $(".GrupChat").hide();
+                    $("#gidecekkullanici").val(idsi);
+                    $(".Genelchat").hide();   
+                    $("#OdaAdi").empty();
+                    $("#OdaAdi").append(`<span >${Adi} Ozel Mesaj Odası</span>`);
+
+
+                    $.ajax({
+                        type: "POST",
+                        url: "@Url.Action("MesajGetir", "Home")",
+                        data: JSON.stringify(Mesaj),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (mesajlar) {
+                            $("#Privatemessages").empty();
+                            if (mesajlar.length == 0) {
+                              
+                            } else {
+
+                            for (var i = 0; i < mesajlar.length; i++) {
+                                if (kullaniciadi == mesajlar[i].Value) {
+                                    $('#Privatemessages').append(`<div class="d-flex justify-content-end mb-4"><div class= "msg_cotainer_send"> <label style="color: #B4886B">Ben:</label> </br>${mesajlar[i].Text}<span class= "msg_time_send" style="margin-top:3px;">Today</span ></div > </div >`);
+                                } else {
+
+                                    $("#Privatemessages").append(`<div class="d-flex justify-content-start mb-4">
+                            <div class="msg_cotainer">
+                               <label style="color: #B4886B">${mesajlar[i].Value}:</label> </br> ${mesajlar[i].Text}
+                              <span class= "msg_time_send" style="margin-top:3px;">Today</span >
+                            </div>
+                        </div>`);
+                                }
+
+                             }
+                            }
+                        },
+                        error: function () {
+                            alert("Hata");
+                        },
+                    });
+
+
+
+                   
+                    $(".Privatechat").show();
+                 
+
+
+
+                    $('#PrivatebtnSendMessage').click(function () {
+
+                        var msg = $("#PrivatetxtMessage").val();
+
+                        if (msg.length > 0) {
+
+                            var gidenKullanici = $('#gidecekkullanici').val();
+
+                            chatHub.server.sendPrivateMessage(gidenKullanici, msg);
+                            $("#PrivatetxtMessage").val('');
+                        }
+                    });
+
+                    $("#PrivatetxtMessage").keypress(function (e) {
+                        if (e.which == 13) {
+                            $('#PrivatebtnSendMessage').click();
+                        }
+                    });
+
+
                 }
             });
+        }
 
 
-        });
+
+        function AddMessage(userName, message) {
+
+            var tarih = new Date();
+            var saat = tarih.getHours();
+            var dakika = tarih.getMinutes();
+            var kullanici = $('#KullaniciName').val();
+
+
+            if (kullanici == userName) {
+                $("#messages").append(`<div class="d-flex justify-content-end mb-4"><div class= "msg_cotainer_send"> <label style="color: #B4886B">Ben:</label> </br>${message}<span class= "msg_time_send" style="margin-top:3px;">${saat}:${dakika} Today</span ></div > </div >`);
+            }
+            else {
+
+                $("#messages").append(`<div class="d-flex justify-content-start mb-4">
+                            <div class="msg_cotainer">
+                               <label style="color: #B4886B">${userName}:</label> </br> ${message}
+                              <span class= "msg_time_send" style="margin-top:3px;">${saat}:${dakika} Today</span >
+                            </div>
+                        </div>`);
+            }
+        }
+
+
+
+  
+
+
+
     </script>
 
 }

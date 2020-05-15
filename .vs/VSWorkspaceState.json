@@ -2,8 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\ChatUygulamasi",
-    "\\ChatUygulamasi\\ChatUygulamasi"
+    "\\ChatUygulamasi\\ChatUygulamasi",
+    "\\ChatUygulamasi\\ChatUygulamasi\\Controllers",
+    "\\ChatUygulamasi\\ChatUygulamasi\\Hubs",
+    "\\ChatUygulamasi\\ChatUygulamasi\\Migrations",
+    "\\ChatUygulamasi\\ChatUygulamasi\\Models",
+    "\\ChatUygulamasi\\ChatUygulamasi\\Views",
+    "\\ChatUygulamasi\\ChatUygulamasi\\Views\\Home"
   ],
-  "SelectedNode": "\\ChatUygulamasi\\ChatUygulamasi.sln",
+  "SelectedNode": "\\ChatUygulamasi\\ChatUygulamasi\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

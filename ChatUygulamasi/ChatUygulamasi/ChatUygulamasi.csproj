@@ -271,16 +271,25 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Hubs\ChatHub.cs" />
-    <Compile Include="Migrations\202005011614060_deneme.cs" />
-    <Compile Include="Migrations\202005011614060_deneme.designer.cs">
-      <DependentUpon>202005011614060_deneme.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202005082235120_cemre.cs" />
     <Compile Include="Migrations\202005082235120_cemre.designer.cs">
       <DependentUpon>202005082235120_cemre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005120141209_deneme2.cs" />
+    <Compile Include="Migrations\202005120141209_deneme2.designer.cs">
+      <DependentUpon>202005120141209_deneme2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005120205401_deneme3.cs" />
+    <Compile Include="Migrations\202005120205401_deneme3.designer.cs">
+      <DependentUpon>202005120205401_deneme3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005132044542_AAA.cs" />
+    <Compile Include="Migrations\202005132044542_AAA.designer.cs">
+      <DependentUpon>202005132044542_AAA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext.cs" />
+    <Compile Include="Models\Kullanici.cs" />
     <Compile Include="Models\Mesaj.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -343,11 +352,17 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202005011614060_deneme.resx">
-      <DependentUpon>202005011614060_deneme.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005082235120_cemre.resx">
       <DependentUpon>202005082235120_cemre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005120141209_deneme2.resx">
+      <DependentUpon>202005120141209_deneme2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005120205401_deneme3.resx">
+      <DependentUpon>202005120205401_deneme3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005132044542_AAA.resx">
+      <DependentUpon>202005132044542_AAA.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
